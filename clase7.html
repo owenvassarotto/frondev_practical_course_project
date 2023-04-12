@@ -1,12 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Desktop Menu</title>
-</head>
-<body>
-    
-</body>
+    <!-- Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --white: #fff;
+        --black: #000;
+        --very-light-pink: #acacac;
+        --text-input-field: #e9e9e9;
+        --hospital-green: #acd9b2;
+        --hospital-green-saturate: #92d39a;
+        --sm: 14px;
+        --md: 16px;
+        --lg: 18px;
+      }
+      body {
+        font-family: "Quicksand", sans-serif;
+        margin: 0;
+      }
+      .desktop-menu{
+        width: 100px;
+        height: 100%;
+        border: 1px solid var(--very-light-pink);
+        padding:20px 20px 0 20px;
+        border-radius: 6px;
+      }
+      .desktop-menu ul{
+        list-style:none;
+        padding: 0;
+        margin: 0;
+      }
+      .desktop-menu ul li{
+        text-align: start;
+        font-weight: bold;
+      }
+      .desktop-menu ul li:last-child{
+        padding-top: 20px;
+        border-top: 1px solid var(--very-light-pink);
+      }
+      .desktop-menu ul li:last-child a{
+        color: var(--hospital-green-saturate);
+        font-size: var(--sm);
+      }
+      .desktop-menu ul li a{
+        color: var(--black);
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="desktop-menu">
+      <ul>
+        <li>
+          <a href="/" class="title">My orders</a>
+        </li>
+        <li>
+          <a href="/" class="title">My account</a>
+        </li>
+        <li>
+          <a href="/" class="title">Sign out</a>
+        </li>
+      </ul>
+    </div>
+  </body>
 </html>
