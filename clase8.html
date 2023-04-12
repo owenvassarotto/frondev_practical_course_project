@@ -28,61 +28,92 @@
         font-family: "Quicksand", sans-serif;
         margin: 0;
       }
-      .mobile-menu{
-        padding: 24px;
+      *{
+        box-sizing: border-box;
       }
-      .mobile-menu a{
+      .mobile-menu {
+        height: 100vh;
+        display: flex;
+        padding: 24px;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .mobile-menu a {
         text-decoration: none;
         color: var(--black);
+        font-weight: bold;
       }
-      .mobile-menu ul{
+      .mobile-menu ul {
         list-style: none;
+        padding: 0;
+      }
+      .mobile-menu ul:nth-child(1) {
+        border-bottom: 1px solid var(--very-light-pink);
+      }
+      .mobile-menu ul li {
+        margin-bottom: 26px;
+      }
+      .mobile-menu div:first-of-type ul:first-child li:first-child a{
+        text-transform: uppercase;
+      }
+      .mobile-menu .last-items li {
+        margin-bottom: 6px;
+      }
+      .mobile-menu .email {
+        font-size: var(--sm);
+        font-weight: 400;
+      }
+      .mobile-menu .sign-out {
+        color: var(--hospital-green-saturate);
+        font-size: var(--sm);
       }
     </style>
   </head>
   <body>
     <div class="mobile-menu">
+      <div>
         <ul>
-            <li>
-                <a href="/">Categories</a>
-            </li>
-            <li>
-                <a href="/">All</a>
-            </li>
-            <li>
-                <a href="/">Clothes</a>
-            </li>
-            <li>
-                <a href="/">Electronics</a>
-            </li>
-            <li>
-                <a href="/">Furniture</a>
-            </li>
-            <li>
-                <a href="/">Toys</a>
-            </li>
-            <li>
-                <a href="/">Others</a>
-            </li>
+          <li>
+            <a href="/">Categories</a>
+          </li>
+          <li>
+            <a href="/">All</a>
+          </li>
+          <li>
+            <a href="/">Clothes</a>
+          </li>
+          <li>
+            <a href="/">Electronics</a>
+          </li>
+          <li>
+            <a href="/">Furniture</a>
+          </li>
+          <li>
+            <a href="/">Toys</a>
+          </li>
+          <li>
+            <a href="/">Others</a>
+          </li>
         </ul>
 
         <ul>
-            <li>
-                <a href="/">My orders</a>
-            </li>
-            <li>
-                <a href="/">My account</a>
-            </li>
+          <li>
+            <a href="/">My orders</a>
+          </li>
+          <li>
+            <a href="/">My account</a>
+          </li>
         </ul>
+      </div>
 
-        <ul>
-            <li>
-                <a href="/" class="email">yardsale@example.com</a>
-            </li>
-            <li>
-                <a href="/" class="sign-out">Sign out</a>
-            </li>
-        </ul>
+      <ul class="last-items">
+        <li>
+          <a href="/" class="email">yardsale@example.com</a>
+        </li>
+        <li>
+          <a href="/" class="sign-out">Sign out</a>
+        </li>
+      </ul>
     </div>
   </body>
 </html>
