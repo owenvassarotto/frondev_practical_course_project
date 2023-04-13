@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My order</title>
+    <!-- Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --white: #fff;
+        --black: #000;
+        --very-light-pink: #ececec;
+        --text-input-field: #e9e9e9;
+        --hospital-green: #acd9b2;
+        --hospital-green-saturate: #92d39a;
+        --sm: 14px;
+        --md: 16px;
+        --lg: 18px;
+      }
+      body {
+        font-family: "Quicksand", sans-serif;
+        margin: 0;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .my-order {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        justify-content: center;
+      }
+      .title {
+        font-size: var(--lg);
+        margin-bottom: 40px;
+      }
+      .my-order-container {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        width: 300px;
+        padding: 20px 0;
+      }
+      .shopping-cart{
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 16px;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-right: 20px;
+      }
+      .shopping-cart figure{
+        margin: 0;
+      }
+      .shopping-cart img {
+        width: 70px;
+        height: 70px;
+        border-radius: 20px;
+        object-fit: cover;
+      }
+      .shopping-cart p:nth-of-type(1){
+        color: #535353;
+      }
+      .shopping-cart p:nth-of-type(2){
+        font-weight: bold;
+      }
+      .order{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 16px;
+        background-color: var(--very-light-pink);
+        border-radius: 6px;
+        align-items: center;
+        margin-bottom: 24px;
+        padding: 0 20px;
+      }
+      .order p:nth-child(1){
+        display: flex;
+        flex-direction: column;
+      }
+      .order p:nth-child(2){
+        text-align: right;
+        font-weight: bold;
+      }
+      .order p span:nth-child(1){
+        font-weight: bold;
+        font-size: var(--md);
+      }
+      .order p span:nth-child(2){
+        font-size: var(--sm);
+        color: #535353;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="my-order">
+      <div class="my-order-container">
+        <h1 class="title">My order</h1>
+        <div class="my-order-content">
+          <div class="order">
+            <p>
+              <span>03.25.21</span>
+              <span>6 articles</span>
+            </p>
+            <p>$560,00</p>
+          </div>
+
+          <div class="shopping-cart">
+            <figure>
+              <img
+                src="https://cdn.shopify.com/s/files/1/0717/8774/1474/products/image_34183352-0258-41ac-8a68-08ed79e6a407.jpg?v=1677577415"
+                alt="Product image"
+              />
+            </figure>
+            <p>Rich Dad Poor Dad Book</p>
+            <p>$250,00</p>
+          </div>
+
+          <div class="shopping-cart">
+            <figure>
+              <img
+                src="https://cdn.shopify.com/s/files/1/0717/8774/1474/products/image_34183352-0258-41ac-8a68-08ed79e6a407.jpg?v=1677577415"
+                alt="Product image"
+              />
+            </figure>
+            <p>Rich Dad Poor Dad Book</p>
+            <p>$250,00</p>
+          </div>
+
+          <div class="shopping-cart">
+            <figure>
+              <img
+                src="https://cdn.shopify.com/s/files/1/0717/8774/1474/products/image_34183352-0258-41ac-8a68-08ed79e6a407.jpg?v=1677577415"
+                alt="Product image"
+              />
+            </figure>
+            <p>Rich Dad Poor Dad Book</p>
+            <p>$250,00</p>
+          </div>
+
+          <div class="shopping-cart">
+            <figure>
+              <img
+                src="https://cdn.shopify.com/s/files/1/0717/8774/1474/products/image_34183352-0258-41ac-8a68-08ed79e6a407.jpg?v=1677577415"
+                alt="Product image"
+              />
+            </figure>
+            <p>Rich Dad Poor Dad Book</p>
+            <p>$250,00</p>
+          </div>
+
+          <div class="shopping-cart">
+            <figure>
+              <img
+                src="https://cdn.shopify.com/s/files/1/0717/8774/1474/products/image_34183352-0258-41ac-8a68-08ed79e6a407.jpg?v=1677577415"
+                alt="Product image"
+              />
+            </figure>
+            <p>Rich Dad Poor Dad Book</p>
+            <p>$250,00</p>
+          </div>
+
+          <div class="shopping-cart">
+            <figure>
+              <img
+                src="https://cdn.shopify.com/s/files/1/0717/8774/1474/products/image_34183352-0258-41ac-8a68-08ed79e6a407.jpg?v=1677577415"
+                alt="Product image"
+              />
+            </figure>
+            <p>Rich Dad Poor Dad Book</p>
+            <p>$250,00</p>
+          </div>
+
+          <div class="shopping-cart">
+            <figure>
+              <img
+                src="https://cdn.shopify.com/s/files/1/0717/8774/1474/products/image_34183352-0258-41ac-8a68-08ed79e6a407.jpg?v=1677577415"
+                alt="Product image"
+              />
+            </figure>
+            <p>Rich Dad Poor Dad Book</p>
+            <p>$250,00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
