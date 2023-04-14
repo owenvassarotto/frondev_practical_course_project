@@ -16,7 +16,7 @@
       :root {
         --white: #fff;
         --black: #000;
-        --very-light-pink: #ececec;
+        --very-light-pink: #a3a3a3;
         --text-input-field: #e9e9e9;
         --hospital-green: #acd9b2;
         --hospital-green-saturate: #92d39a;
@@ -31,33 +31,128 @@
       * {
         box-sizing: border-box;
       }
+      .navbar{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 45px;
+        border-bottom: 1px solid var(--text-input-field);
+      }
+      .menu{
+        display: none;
+      }
+      .logo{
+        width: 150px;
+      }
+      .navbar-left ul,
+      .navbar-right ul{
+        list-style:none;
+        margin-top: 24px;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        height: 60px;
+      }
+      .navbar-left{
+        display: flex;
+      }
+      .navbar-left ul{
+        margin-left: 40px;
+      }
+      .navbar-left ul a{
+        text-decoration: none;
+        color: var(--very-light-pink);
+        margin-right: 16px;
+        font-weight: 600;
+      }
+      .navbar-left ul a:hover,
+      .navbar .active{
+        border: 1px solid var(--hospital-green-saturate);
+        padding: 5px 10px;
+        border-radius: 8px;
+        color: var(--hospital-green-saturate);
+      }
+      .navbar-email{
+        color: var(--very-light-pink);
+        font-size: var(--sm);
+        font-weight: 500;
+        margin-right: 12px;
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        margin-right: 30px;
+      }
+      .navbar-email img{
+        transform: rotate(90deg);
+        width: 6px;
+      }
+      .navbar-shopping-cart {
+        position:relative;
+        cursor: pointer;
+      }
+      .navbar-shopping-cart div{
+        width: 15px;
+        height: 15px;
+        background-color: var(--hospital-green-saturate);
+        border-radius: 50%;
+        font-size: var(--sm);
+        font-weight: bold;
+        position: absolute;
+        top: -6px;
+        right: -6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      @media (max-width: 640px) {
+        .menu{
+          display: block;
+        }
+        .navbar-left ul,
+        .navbar-email{
+          display: none;
+        }
+      }
     </style>
   </head>
   <body>
-    <nav>
-        <img src="/icons/icon_menu.svg" alt="Menu icon">
+    <nav class="navbar">
+        <img class="menu" src="/icons/icon_menu.svg" alt="Menu icon">
 
         <div class="navbar-left">
             <img src="/logos/logo_yard_sale.svg" alt="Logo" class="logo">
 
             <ul>
                 <li>
-                    <a href="/">All</a>
+                    <a href="#" class="active">All</a>
                 </li>
                 <li>
-                    <a href="/">Clothes</a>
+                    <a href="#">Clothes</a>
                 </li>
                 <li>
-                    <a href="/">Electronics</a>
+                    <a href="#">Electronics</a>
                 </li>
                 <li>
-                    <a href="/">Furniture</a>
+                    <a href="#">Furniture</a>
                 </li>
                 <li>
-                    <a href="/">Toys</a>
+                    <a href="#">Toys</a>
                 </li>
                 <li>
-                    <a href="/">Others</a>
+                    <a href="#">Others</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <ul>
+                <li class="navbar-email">
+                 <p>yardsale@email.com</p>
+                 <img src="/icons/flechita.svg" alt="Arrow icon">
+                </li>
+                <li class="navbar-shopping-cart">
+                    <img src="/icons/icon_shopping_cart.svg" alt="Shopping cart icon">
+                    <div>6</div>
                 </li>
             </ul>
         </div>
