@@ -94,6 +94,22 @@
         font-size: var(--sm);
         margin-bottom: 30px;
       }
+      .dots{
+        display: flex;
+        justify-content: center;
+        column-gap: 4px;
+        margin-top: 10px;
+      }
+      .dots .dot{
+        width: 8px;
+        height: 8px;
+        background-color: #bebebe;
+        border-radius: 50%;
+      }
+      .dots .dot:nth-child(2),
+      .dots .dot:nth-child(3){
+        background-color: #d4d4d4;
+      }
       /* Responsive Design - Media Queries */
       @media (max-width:640px){
         .product-detail{
@@ -108,6 +124,11 @@
             <img src="/icons/icon_close.png" alt="Close icon">
         </div>
         <img src="https://d2r9epyceweg5n.cloudfront.net/stores/002/183/781/products/x-caliber-8-white11-29e6c22d4d512c9ca316551503850872-640-0.webp" alt="Bike image">
+        <div class="dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
         <div class="product-info">
             <p>$63,40</p>
             <p>Mountain Bike S560 PRO</p>
