@@ -17,9 +17,13 @@
       :root {
         --white: #fff;
         --black: #000;
-        --very-light-pink: #c7c7c7;
-        --text-input-field: #f7f7f7;
+        --very-light-pink: #707070;
+        --text-input-field: #e9e9e9;
         --hospital-green: #acd9b2;
+        --hospital-green-saturate: #92d39a;
+        --sm: 14px;
+        --md: 16px;
+        --lg: 18px;
       }
       body{
         font-family: 'Quicksand', sans-serif;
@@ -28,13 +32,107 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
+        text-decoration: none;
+      }
+      .primary-button {
+        font-family: "Quicksand", sans-serif;
+        background-color: var(--hospital-green);
+        border-radius: 8px;
+        border: none;
+        color: var(--white);
+        width: 100%;
+        cursor: pointer;
+        font-size: var(--md);
+        font-weight: bold;
+        height: 50px;
+      }
+      .add-to-cart-button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .product-detail{
+        width: 360px;
+        position: absolute;
+        right: 0;
+        border: 1px solid var(--text-input-field);
+      }
+      .product-detail .product-detail-close img{
+        position: absolute;
+        background-color: var(--white);
+        padding: 10px;
+        border-radius: 50%;
+        top: 14px;
+        left: 14px;
+      }
+      .product-detail .product-detail-close:hover{
+        cursor: pointer;
+      }
+      .product-detail img:nth-child(2){
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+        border-radius: 0 0 20px 20px;
+      }
+      .product-info{
+        padding: 26px;
+      }
+      .product-info p:nth-child(1){
+        font-weight: bold;
+        font-size: var(--md);
+        margin-bottom: 4px;
+        color: #272727;
+      }
+      .product-info p:nth-child(2),
+      .product-info p:nth-child(3){
+        color: var(--very-light-pink);
+      }
+      .product-info p:nth-child(2){
+        margin-bottom: 22px;
+      }
+      .product-info p:nth-child(3){
+        font-size: var(--sm);
+        margin-bottom: 30px;
+      }
+      .dots{
+        display: flex;
+        justify-content: center;
+        margin-top: 8px;
+      }
+      .dot{
+        height: 10px;
+        width: 10px;
+        background-color: var(--very-light-pink);
+        border-radius: 50%;
+      }
+      /* Responsive Design - Media Queries */
+      @media (max-width:640px){
+        .product-detail{
+            width: 100%;
+        }
       }
     </style>
   </head>
   <body>
     <aside class="product-detail">
-        <img src="/icons/icon_close.png" alt="Close icon">
-        <img src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Bike image">
+        <div class="product-detail-close">
+            <img src="/icons/icon_close.png" alt="Close icon">
+        </div>
+        <img src="https://d2r9epyceweg5n.cloudfront.net/stores/002/183/781/products/x-caliber-8-white11-29e6c22d4d512c9ca316551503850872-640-0.webp" alt="Bike image">
+        <div class="dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <div class="product-info">
+            <p>$63,40</p>
+            <p>Mountain Bike S560 PRO</p>
+            <p>The Mountain Bike S560 PRO is a high-end mountain bike designed for the most demanding riders who seek an optimal riding experience on tough terrain. The bike features a high-quality aluminum frame that gives it the necessary strength to withstand any type of terrain while being lightweight for a more agile and comfortable ride.</p>
+            <button class="primary-button add-to-cart-button">
+                <img src="/icons/bt_add_to_cart.svg" alt="Add to cart icon">
+                <span>Add to cart</span>
+            </button>
+        </div>
     </aside>
   </body>
 </html>
